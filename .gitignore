@@ -12,8 +12,11 @@
 *.err
 *.cos
 *.ccspjt
+*.cof
 
 # main.c is not relevant here
 main.c
+
+*.hex
 
 articulo.txt
