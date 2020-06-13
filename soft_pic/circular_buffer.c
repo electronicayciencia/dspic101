@@ -1,4 +1,3 @@
-// Circular buffer
 // Test hardware circular buffer
 #include <main.h>
 
@@ -19,7 +18,7 @@ void main()
 	{
 		#ASM
 		mov #0,w0      ; w0 is the counter: start at 0
-		mov buffer,w1  ; w1 is the pointer: start at buffer
+		mov buffer,w1  ; w1 is the pointer: start at buffer[0]
 			
 		do #100,fill   ; repeat 100 times until "fill", included
 		mov w0,[w1++]  ; store w0 at w1, post-increment pointer
