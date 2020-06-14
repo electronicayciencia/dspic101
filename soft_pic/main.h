@@ -10,7 +10,7 @@
 
 #FUSES HS2_PLL8
 #use delay(clock=80Mhz)
-#use rs232(baud=9600,xmit=PIN_B4,rcv=PIN_B5)
+#use rs232(baud=9600, UART1)
 
 #define LED_BIG_RED      PIN_B6
 #define LED_SMALL_RED    PIN_C14
@@ -24,7 +24,7 @@ and vice versa. The exception to this rule is when the buffer length is an even
 power of 2 and the start and end addresses can be chosen to meet the boundary 
 requirements for both incrementing and decrementing modulo buffers.
 */
-#define HISTLEN 256
+
 
 
 
