@@ -1,4 +1,4 @@
-// Test MAC operation and Acc access. Fract version.
+// Test MAC operation and Acc access. Fractional version.
 #include <main.h>
 
 void main()
