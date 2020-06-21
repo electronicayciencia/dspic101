@@ -82,12 +82,15 @@ struct {
 #define MODCON_XWM_WREG12  12
 #define MODCON_XWM_WREG13  13
 #define MODCON_XWM_WREG14  14
+#define MODCON_XWM_DISABLED 15
+
 
 // Constants for MODCONbits.YWM or YWM modulo addressing
 // All other settings of the YWM<3:0> control bits are 
 // reserved and should not be used.
 #define MODCON_YWM_WREG10  10
 #define MODCON_YWM_WREG11  11
+#define MODCON_YWM_DISABLED 15
 
 // Constants for MODCONbits.BWM addressing
 #define MODCON_BWM_WREG0    0
@@ -105,6 +108,7 @@ struct {
 #define MODCON_BWM_WREG12  12
 #define MODCON_BWM_WREG13  13
 #define MODCON_BWM_WREG14  14
+#define MODCON_BWM_DISABLED 15
 
 // Constants for MODCONbits.XMODEN or YMODEN
 #define MODCON_XMODEN_DISABLED 0
@@ -196,3 +200,9 @@ struct {
 
 } ADCON3bits;
 #locate ADCON3bits = ADCON3
+
+
+
+#define FRACT(x)   ( (x)>=1 ? 32767 : (x) <= -1 ? -32768 : (x) * 32768. )
+
+typedef signed int16 fract_t;
